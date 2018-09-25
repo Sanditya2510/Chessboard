@@ -47,7 +47,7 @@ export default class Functions extends Component {
 
   
 
-  // central squares get diff dropSquareStyles
+
   onDragOverSquare = square => {
     this.setState({
       dropSquareStyle:
@@ -109,10 +109,10 @@ const squareStyling = ({ pieceSquare, history }) => {
   const targetSquare = history.length && history[history.length - 1].to;
 
   return {
-    [pieceSquare]: { backgroundColor: "rgba(255, 255, 0, 0.4)" },
+    [pieceSquare]: { backgroundColor: "rgba(255, 255, 0, 0.4)" },//yellow color on squares being clicked 
     ...(history.length && {
       [sourceSquare]: {
-        backgroundColor: "rgba(0, 255, 0, 0.4)"
+        backgroundColor: "rgba(0, 255, 0, 0.4)"// green color on target and source squares after the move
       }
     }),
     ...(history.length && {
